@@ -20,4 +20,11 @@ public class TareaDAO implements ITareaDAO {
 		List<Tarea> tareas = miSesion.createQuery("from Tarea", Tarea.class).list();
 		return tareas;
 	}
+
+	@Override
+	public void save(Tarea tarea) {
+		Session miSesion = sessionFactory.getCurrentSession();
+		miSesion.save(tarea);		
+	}
+	
 }

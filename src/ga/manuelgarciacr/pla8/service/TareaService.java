@@ -19,4 +19,9 @@ public class TareaService implements ITareaService {
 	public List<Tarea> getTareas() {
 		return tareaDAO.getTareas();
 	}
+
+	@Override
+	public void save(Tarea tarea) {
+		tareaDAO.save(tarea);
+	}
 }

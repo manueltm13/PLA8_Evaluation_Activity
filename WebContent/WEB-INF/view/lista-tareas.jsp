@@ -27,5 +27,6 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<a href="${pageContext.request.contextPath}/tarea/addtarea">Añadir tarea</a>
 </body>
 </html>
