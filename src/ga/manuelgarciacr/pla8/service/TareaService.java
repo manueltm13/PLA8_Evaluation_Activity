@@ -29,4 +29,9 @@ public class TareaService implements ITareaService {
 	public Tarea getTarea(int idtarea) {
 		return tareaDAO.getTarea(idtarea);
 	}
+
+	@Override
+	public void delete(Tarea tarea) {
+		tareaDAO.delete(tarea);
+	}
 }

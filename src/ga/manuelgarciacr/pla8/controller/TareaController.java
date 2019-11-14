@@ -46,4 +46,11 @@ public class TareaController {
 		modelo.addAttribute("tarea", tarea);
 		return "form-tarea";
 	}
+
+	@GetMapping("deletetarea")
+	public String deleteTarea(@RequestParam("idtarea") int idtarea) {
+		Tarea tarea = tareaService.getTarea(idtarea);
+		tareaService.delete(tarea);
+		return "redirect:/tarea/lista";
+	}
 }

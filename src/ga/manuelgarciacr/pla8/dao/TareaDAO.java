@@ -32,5 +32,11 @@ public class TareaDAO implements ITareaDAO {
 		Session miSesion = sessionFactory.getCurrentSession();
 		return miSesion.get(Tarea.class,idtarea);
 	}
+
+	@Override
+	public void delete(Tarea tarea) {
+		Session miSesion = sessionFactory.getCurrentSession();
+		miSesion.delete(tarea);	
+	}
 	
 }

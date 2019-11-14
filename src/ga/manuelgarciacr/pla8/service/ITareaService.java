@@ -9,4 +9,6 @@ public interface ITareaService {
 	void save(Tarea tarea);
 
 	Tarea getTarea(int idtarea);
+
+	void delete(Tarea tarea);
 }
