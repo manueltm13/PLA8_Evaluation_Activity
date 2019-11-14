@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import ga.manuelgarciacr.pla8.dao.ITareaDAO;
 import ga.manuelgarciacr.pla8.entity.Tarea;
+import ga.manuelgarciacr.pla8.service.ITareaService;
 
 @Controller
 @RequestMapping("/tarea")
 public class TareaController {
 	@Autowired
-	private ITareaDAO tareaDAO;
-	
+	private ITareaService tareaService;
+
 	@RequestMapping("/lista")
 	public String lista(Model modelo) {
-		List<Tarea> tareas=tareaDAO.getTareas();
-		
-		modelo.addAttribute("tareas",tareas);
+		List<Tarea> tareas = tareaService.getTareas();
+		modelo.addAttribute("tareas", tareas);
 		return "lista-tareas";
 	}
 }

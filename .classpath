@@ -14,7 +14,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/home/manuel/Documentos/TM13-Java/hibernate-release-5.4.8.Final (jars en lib+required))/jars para eclipse (ORM)/mysql-connector-java-8.0.18.jar"/>
-	<classpathentry kind="lib" path="/home/manuel/eclipse-workspace/TM13/PLA6_Evaluation_Activity/WebContent/WEB-INF/lib/spring-webmvc-5.2.0.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
