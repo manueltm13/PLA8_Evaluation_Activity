@@ -24,4 +24,9 @@ public class TareaService implements ITareaService {
 	public void save(Tarea tarea) {
 		tareaDAO.save(tarea);
 	}
+
+	@Override
+	public Tarea getTarea(int idtarea) {
+		return tareaDAO.getTarea(idtarea);
+	}
 }

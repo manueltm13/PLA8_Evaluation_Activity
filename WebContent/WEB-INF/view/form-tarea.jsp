@@ -10,6 +10,7 @@
 <body>
 	<h1>Tarea</h1>
 	<form:form action="savetarea" modelAttribute="tarea" method="post">
+		<form:hidden path="idtarea" />
 		<p>
 			Nombre:
 			<form:input path="nombre" />

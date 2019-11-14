@@ -24,7 +24,13 @@ public class TareaDAO implements ITareaDAO {
 	@Override
 	public void save(Tarea tarea) {
 		Session miSesion = sessionFactory.getCurrentSession();
-		miSesion.save(tarea);		
+		miSesion.saveOrUpdate(tarea);	
+	}
+
+	@Override
+	public Tarea getTarea(int idtarea) {
+		Session miSesion = sessionFactory.getCurrentSession();
+		return miSesion.get(Tarea.class,idtarea);
 	}
 	
 }

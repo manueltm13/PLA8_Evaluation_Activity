@@ -7,4 +7,6 @@ public interface ITareaDAO {
 	List<Tarea> getTareas();
 
 	void save(Tarea tarea);
+
+	Tarea getTarea(int idtarea);
 }

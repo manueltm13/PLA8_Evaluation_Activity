@@ -18,12 +18,16 @@
 			<td>Vencimiento</td>
 		</tr>
 		<c:forEach var="tarea" items="${tareas}">
+			<c:url var="linkEditar" value="/tarea/updatetarea">
+				<c:param name="idtarea" value="${tarea.idtarea }" />
+			</c:url>
 			<tr>
 				<td>${tarea.idtarea }</td>
 				<td>${tarea.nombre }</td>
 				<td>${tarea.prioridad }</td>
 				<td><fmt:formatDate value="${tarea.vencimiento}" type="date"
 						pattern="dd-MM-yyyy" /></td>
+				<td><a href="${linkEditar }">Editar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
