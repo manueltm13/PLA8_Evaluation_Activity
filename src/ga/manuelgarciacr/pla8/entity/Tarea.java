@@ -1,12 +1,19 @@
 package ga.manuelgarciacr.pla8.entity;
 
-import java.sql.Date;
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+
+
 
 @Entity
 @Table(name = "tarea")
@@ -20,6 +27,7 @@ public class Tarea {
 	@Column(name = "prioridad")
 	private String prioridad;
 	@Column(name = "vencimiento")
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date vencimiento;
 
 	public Tarea() {
