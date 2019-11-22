@@ -24,7 +24,7 @@ public class TestConDbServlet extends HttpServlet {
 	@SuppressWarnings("deprecation")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cadConexion = "jdbc:mysql://localhost:3306/";
-		String bd = "tareas";
+		String bd = "tm13contactos";
 		String usuario = "root";
 		String pass = "";
 		

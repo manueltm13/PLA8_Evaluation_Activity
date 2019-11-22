@@ -31,7 +31,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/tareas?useSSL=false&amp;serverTimezone=Europe/Warsaw" />
+			value="jdbc:mysql://localhost:3306/tm13contactos?useSSL=false&amp;serverTimezone=Europe/Madrid" />
 		<property name="user" value="root" />
 		<property name="password" value="" />
 		<!-- these are connection pool properties for C3P0 -->

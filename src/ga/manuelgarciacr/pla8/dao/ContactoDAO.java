@@ -5,38 +5,37 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import ga.manuelgarciacr.pla8.entity.Tarea;
+import ga.manuelgarciacr.pla8.entity.Contacto;
 
 @Repository
-public class TareaDAO implements ITareaDAO {
+public class ContactoDAO implements IContactoDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	public List<Tarea> getTareas() {
+	public List<Contacto> getContactos() {
 		Session miSesion = sessionFactory.getCurrentSession();
-		List<Tarea> tareas = miSesion.createQuery("from Tarea", Tarea.class).list();
+		List<Contacto> tareas = miSesion.createQuery("from Contacto", Contacto.class).list();
 		return tareas;
 	}
 
 	@Override
-	public void save(Tarea tarea) {
+	public void save(Contacto contacto) {
 		Session miSesion = sessionFactory.getCurrentSession();
-		miSesion.saveOrUpdate(tarea);	
+		miSesion.saveOrUpdate(contacto);	
 	}
 
 	@Override
-	public Tarea getTarea(int idtarea) {
+	public Contacto getContacto(int idcontacto) {
 		Session miSesion = sessionFactory.getCurrentSession();
-		return miSesion.get(Tarea.class,idtarea);
+		return miSesion.get(Contacto.class,idcontacto);
 	}
 
 	@Override
-	public void delete(Tarea tarea) {
+	public void delete(Contacto contacto) {
 		Session miSesion = sessionFactory.getCurrentSession();
-		miSesion.delete(tarea);	
+		miSesion.delete(contacto);	
 	}
 	
 }
